@@ -1,23 +1,8 @@
-import reactLogo from './assets/react.svg'
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import NavBar from "./components/NavBar"
 
-function Header () {
-  return (
-    <header>
-      <img 
-        src={reactLogo} 
-        alt="react-logo" 
-        width="40px" />
 
-        <nav>
-          <ul className='nav'>
-            <li className='nav-item'>Pricing</li>
-            <li className='nav-item'>About</li>
-            <li className='nav-item'>Careers</li>
-          </ul>
-        </nav>
-    </header>
-  )
-}
 
 function MainContent() {
   return (
@@ -34,21 +19,14 @@ function MainContent() {
   )
 }
 
-function Footer() {
-  return (
-    <footer>
-      <small>
-        <p>© {new Date().getFullYear()} Scrimba Course Development. All rights reserved.</p>
-      </small> 
-    </footer>
-  )
-}
+
 const App = () => {
   return (
     <>
     <Header />
     <MainContent />
     <Footer />
+    <NavBar />
     </>
   
   )
