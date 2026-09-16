@@ -6,6 +6,10 @@ const NavBar = () => {
     { name: 'Pricing', href: '#pricing' },
     { name: 'Docs', href: '#docs' },
   ];
+
+  function handleClick(e) {
+    console.log('Join now', e.target);
+  }
   return (
    <header className="w-full border-b border-gray-100 sticky">
      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
@@ -19,7 +23,7 @@ const NavBar = () => {
           {navLinks.map((link) => (
             <li key={link.name}>
               <a href={link.href}
-              className="px-4 py-2 rounded-full hover:bg-[#EAF6AD]/60"
+              className="px-4 py-2 rounded-full hover:bg-gray-300/50"
               >
                 {link.name}
               </a>
@@ -30,11 +34,11 @@ const NavBar = () => {
 
       {/* Action Button */}
       <div className="">
-          <button 
+          <button onClick={handleClick} 
             type="button"
             className="bg-gray-950 text-white hover:bg-gray-700 px-6 py-3 rounded-full text-sm transition-all duration-200 shadow-md hover:shadow active:scale-95"
             >
-            Download
+            Join now
           </button>
       </div>
        
